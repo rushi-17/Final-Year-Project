@@ -1,0 +1,50 @@
+      <?php 
+      $query="SELECT *FROM apply";
+      $stmt=$conn->prepare($query);
+      $stmt->execute();
+      $result=$stmt->get_result();
+      ?>
+
+      <h3 class="text-center text-info">Leaves Details</h3>
+
+      <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>EmpName</th>
+        <th>LeaveType</th>
+        <th>FromDate</th>
+        <th>ToDate</th>
+        <th>Description</th>
+        <!--<th>Action</th>-->
+
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        while ($row=$result->fetch_assoc()){ ?>
+
+      <tr>
+        <td><?= $row['id']; ?></td>
+        <td><?= $row['name']; ?></td>
+        <td><?= $row['leavetype']; ?></td>     
+        <td><?= $row['from']; ?></td>
+        <td><?= $row['to']; ?></td>
+        <td><?= $row['desp']; ?></td>
+        
+        <!--<td>
+          <a href="details.php?details=<?= $row['id']; ?>" class="badge badge-success p-2">Accept</a>|
+          <a href="action.php?delete=<?= $row['id']; ?>" class="badge badge-danger p-2" onclick="return confirm('Do You Wanna Reject leave?')">Reject</a>
+          <a href="manage.php?edit=<?= $row['id']; ?>" class="badge badge-success p-2">Edit</a>
+
+        </td>-->
+
+      </tr>
+      <?php }?>
+    </tbody>
+  </table>
+    </div>
+    </div>
+
+</body>
+</html>

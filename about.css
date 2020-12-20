@@ -1,0 +1,38 @@
+body{
+		margin: 0;
+		background: #f2f2f2f;
+		
+
+	}
+
+	h1{
+	font-family: sans-serif;
+	font-size: 40px;
+	color: Black;
+}
+
+h3{
+	font-family: sans-serif;
+	font-size: 35px;
+	color: black;
+}
+
+ul{
+	font-family: sans-serif;
+	font-size: 30px;
+	color: black;
+}
+ul li{
+	font-family: sans-serif;
+	font-size: 20px;
+	color: black;
+}
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    font-size: 20px;
+    text-align:center;
+    padding:15px;
+    height: 25px; 
+}	 	 
